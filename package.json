@@ -1,0 +1,35 @@
+{
+  "name": "raf",
+  "version": "0.9.0",
+  "description": "An Apollo GraphQL example using React and FakerQl.",
+  "main": "src/server/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "precommit": "pretty-quick --staged"
+  },
+  "repository": "git@github.com:juandc/RAF.git",
+  "author": "Juan David Castro <me@juandc.co>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-cache-inmemory": "^1.1.11",
+    "apollo-client": "^2.2.7",
+    "apollo-link-http": "^1.5.3",
+    "express": "^4.16.3",
+    "react": "^16.3.0-alpha.3",
+    "react-dom": "^16.3.0-alpha.3",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "husky": "^0.14.3",
+    "prettier": "^1.11.1",
+    "pretty-quick": "^1.4.1"
+  }
+}

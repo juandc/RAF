@@ -1,11 +1,15 @@
 const { resolve } = require("path");
 
-const { NODE_ENV: mode = "production", PORT: port = 3000 } = process.env;
+const { NODE_ENV: mode = "development", PORT: port = 3000 } = process.env;
+
+const context = resolve(__dirname, "../src/");
+const devtool = "cheap-module-source-map";
+const vendor = ["react", "react-dom", "react-router"];
 
 module.exports = {
-  htmlTemplate: resolve(__dirname, "../public"),
-  context: resolve(__dirname, "../src/"),
-  dev: mode !== "production",
+  context,
+  devtool,
+  vendor,
   mode,
   port
 };

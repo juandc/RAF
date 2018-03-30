@@ -1,22 +1,25 @@
 import React from "react";
 import Express from "express";
-import { renderToString } from "react-dom/server";
-import App from "./client";
+import { renderToNodeStream } from "react-dom/server";
+import { join } from "path";
+import ServerSide from "./utils/html";
+import { port } from "./utils/env";
 
-const { PORT: port } = process.env;
 const app = new Express();
+
+app.use("/static", Express.static(join(process.cwd(), "./dist/static")));
 
 app.use((req, res) => {
   const context = {};
-  const location = req.url;
-  const cookie = req.header("cookie");
-
-  const props = { context, cookie, location };
-  const html = renderToString(<App {...props} />);
+  const serverProps = {
+    cookie: req.header("cookie"),
+    location: req.url,
+    context
+  };
 
   return context.url
     ? (res.writeHead(302, { Location: context.url }), res.end())
-    : (res.write(html), res.end());
+    : res.write(renderToNodeStream(<ServerSide {...serverProps} />).pipe(res));
 });
 
 app.listen(port, () => console.log(`Server running at localhost:${port}`)); // eslint-disable-line no-console

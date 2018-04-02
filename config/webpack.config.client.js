@@ -1,11 +1,11 @@
-const webpackConfig = require("./");
+const webpackConfig = require('./');
 
 module.exports = webpackConfig({
-  name: "client",
+  name: 'client',
   config: {
     // externals,
     isStatic: true,
-    target: "web",
+    target: 'web',
     withVendor: true,
     optimization: {
       splitChunks: {
@@ -13,11 +13,11 @@ module.exports = webpackConfig({
           default: false,
           commons: {
             test: /[\\/]node_modules[\\/]/,
-            name: "vendor",
-            chunks: "all"
-          }
-        }
-      }
-    }
-  }
+            name: 'vendor',
+            chunks: 'all',
+          },
+        },
+      },
+    },
+  },
 });

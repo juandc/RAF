@@ -1,7 +1,7 @@
-import React from "react";
-import { StaticRouter } from "react-router-dom";
-import ApolloContainer from "./apollo";
-import App from "../app";
+import React from 'react';
+import { StaticRouter } from 'react-router-dom';
+import ApolloContainer from './apollo';
+import App from '../app';
 
 // eslint-disable-next-line react/prop-types
 const Html = ({ context, cookie, location }) => (

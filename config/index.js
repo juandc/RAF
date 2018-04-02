@@ -1,22 +1,19 @@
-const { resolve } = require("path");
-const defaultConfig = require("./defaultConfig");
-const { vendor } = require("./utils");
+const { resolve } = require('path');
+const defaultConfig = require('./defaultConfig');
+const { vendor } = require('./utils');
 
-function webpackConfig({
-  name,
-  config: { outputPath, withVendor, isStatic, ...config }
-}) {
+function webpackConfig({ name, config: { outputPath, withVendor, isStatic, ...config } }) {
   return {
     ...defaultConfig,
     ...config,
     entry: {
       [name]: `./${name}.js`,
-      ...(() => withVendor && { vendor })()
+      ...(() => withVendor && { vendor })(),
     },
     output: {
-      path: resolve(__dirname, `../dist${isStatic ? "/static" : ""}`),
-      filename: `[name].js`
-    }
+      path: resolve(__dirname, `../dist${isStatic ? '/static' : ''}`),
+      filename: `[name].js`,
+    },
   };
 }
 

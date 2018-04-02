@@ -1,4 +1,4 @@
-const { context, mode, devtool } = require("./utils");
+const { context, mode, devtool } = require('./utils');
 
 module.exports = {
   context,
@@ -9,11 +9,11 @@ module.exports = {
       {
         exclude: /node_modules/,
         test: /\.(js)$/,
-        use: ["babel-loader"]
-      }
-    ]
+        use: ['babel-loader'],
+      },
+    ],
   },
   resolve: {
-    extensions: [".js"]
-  }
+    extensions: ['.js'],
+  },
 };

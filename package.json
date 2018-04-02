@@ -1,21 +1,19 @@
 {
   "name": "raf",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "An Apollo GraphQL example using React and FakerQl.",
   "main": "dist/server.js",
   "scripts": {
     "build": "rm -rf ./dist npm run build:server && npm run build:client",
-    "build:dev":
-      "npm run build:server -- --watch & npm run build:client -- --watch",
+    "build:dev": "npm run build:server -- --watch & npm run build:client -- --watch",
     "build:server": "webpack --config config/webpack.config.server.js",
     "build:client": "webpack --config config/webpack.config.client.js",
     "start": "node dist/server",
     "start:dev": "nodemon dist/server",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "precommit": "pretty-quick --staged",
-    "dev":
-      "NODE_ENV=development PORT=3000 npm run build && npm run start:dev & npm run build:dev"
+    "precommit": "lint-staged",
+    "dev": "NODE_ENV=development PORT=3000 npm run build && npm run start:dev & npm run build:dev"
   },
   "repository": "git@github.com:juandc/RAF.git",
   "author": "Juan David Castro (@juandc) <me@juandc.co>",
@@ -48,9 +46,9 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
     "husky": "^0.14.3",
+    "lint-staged": "^7.0.2",
     "nodemon": "^1.17.2",
     "prettier": "^1.11.1",
-    "pretty-quick": "^1.4.1",
     "react-hot-loader": "^4.0.0",
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.13",

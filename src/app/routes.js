@@ -1,17 +1,17 @@
-import Home from "./home";
-import Users from "./users";
+import Home from './home';
+import Users from './users';
 
 export default [
   {
-    name: "Home",
-    path: "/",
+    name: 'Home',
+    path: '/',
     component: Home,
-    exact: true
+    exact: true,
   },
   {
-    name: "Users",
-    path: "/users",
+    name: 'Users',
+    path: '/users',
     component: Users,
-    exact: true
-  }
+    exact: true,
+  },
 ];

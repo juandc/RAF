@@ -8,7 +8,7 @@ function webpackConfig({ name, config: { outputPath, withVendor, isStatic, ...co
     ...config,
     entry: {
       [name]: `./${name}.js`,
-      ...(() => withVendor && { vendor })(),
+      ...(withVendor && { vendor }),
     },
     output: {
       path: resolve(__dirname, `../dist${isStatic ? '/static' : ''}`),

@@ -15,7 +15,7 @@ The project is created to build a modern React application:
 * Apollo client 2.2
 * Server Side Rendering
 * Code Spliting (by Vendor and Routes) (working in)
-* Hot Reload (working in)
+* Live Reload (without browser extension)
 * Bundle Analizer (comming soon)
 * Linter with prettier and eslint (airbnb's config)
 

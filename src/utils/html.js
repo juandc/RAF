@@ -25,6 +25,7 @@ const Html = ({ context, cookie, location }) => (
       </div>
       <script src="/static/vendor.js" />
       <script src="/static/client.js" />
+      <script src="http://localhost:35729/livereload.js" /> {/* TODO: No production ready! */}
     </body>
   </html>
 );

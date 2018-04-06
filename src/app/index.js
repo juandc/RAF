@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { hot } from 'react-hot-loader'; // eslint-disable-line import/no-extraneous-dependencies
-import routes from './routes';
+import routes from './pages/routes';
+import Nav from './components/Nav';
 
-const App = () => <Switch>{routes.map(route => <Route key={route.name} {...route} />)}</Switch>;
+const App = () => (
+  <Fragment>
+    <Nav />
+    <Switch>{routes.map(route => <Route key={route.name} {...route} />)}</Switch>
+  </Fragment>
+);
 
-export default hot(module)(App);
+export default App;

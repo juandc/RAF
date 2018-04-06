@@ -1,3 +1,5 @@
+const LiveReloadPlugin = require('webpack-livereload-plugin');
+const { mode } = require('./utils');
 const webpackConfig = require('./');
 
 module.exports = webpackConfig({
@@ -19,5 +21,6 @@ module.exports = webpackConfig({
         },
       },
     },
+    plugins: [mode === 'development' && new LiveReloadPlugin({ delay: 450 })],
   },
 });

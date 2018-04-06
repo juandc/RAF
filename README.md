@@ -21,16 +21,20 @@ The project is created to build a modern React application:
 
 ## Getting started
 
-Run the following script:
+Run the following script in diferent terminals:
 
 ```bash
-npm run dev
+npm run build:dev
+# and in the other terminal
+npm run start:dev
 ```
 
 Or if you prefer Yarn
 
 ```bash
-yarn dev
+yarn build:dev
+# and in the other terminal
+yarn start:dev
 ```
 
 ## Tests

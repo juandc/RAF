@@ -13,6 +13,7 @@ The project is created to build a modern React application:
 * React 16.3
 * Webpack and React Router 4
 * Apollo client 2.2
+* Styled Components
 * Server Side Rendering
 * Code Spliting (by Vendor and Routes) (working in)
 * Live Reload (without browser extension)

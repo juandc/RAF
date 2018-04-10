@@ -21,6 +21,6 @@ module.exports = webpackConfig({
         },
       },
     },
-    plugins: [mode === 'development' && new LiveReloadPlugin({ delay: 450 })],
+    plugins: [mode === 'development' && new LiveReloadPlugin({ delay: 470 })],
   },
 });

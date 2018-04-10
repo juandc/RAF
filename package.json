@@ -1,6 +1,6 @@
 {
   "name": "raf",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "An Apollo GraphQL example using React and FakerQl.",
   "main": "dist/server.js",
   "scripts": {
@@ -28,10 +28,11 @@
     "graphql-tag": "^2.8.0",
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.6.1",
-    "react": "^16.3.0-alpha.3",
+    "react": "^16.3.1",
     "react-apollo": "^2.1.0-rc.4",
-    "react-dom": "^16.3.0-alpha.3",
-    "react-router-dom": "^4.2.2"
+    "react-dom": "^16.3.1",
+    "react-router-dom": "^4.2.2",
+    "styled-components": "^3.2.5"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.42",
